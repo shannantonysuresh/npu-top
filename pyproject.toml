@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "npu-top"
+version = "0.1.0"
+description = "Live CPU / GPU / NPU usage in the terminal on Windows, with per-process NPU attribution. Zero dependencies."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["npu", "ai-pc", "monitor", "openvino", "windows", "intel", "ryzen-ai", "copilot-pc"]
+classifiers = ["Operating System :: Microsoft :: Windows", "Environment :: Console", "Topic :: System :: Monitoring"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+npu-top = "npu_top.cli:main"
+
+[tool.setuptools]
+packages = ["npu_top"]
